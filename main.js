@@ -35,6 +35,7 @@ app.on('ready', () => {
       nodeIntegration: true,
     }
   });
+  win.maximize()
   //设置菜单
   const menu = Menu.buildFromTemplate(menuTemplate)
   Menu.setApplicationMenu(menu);

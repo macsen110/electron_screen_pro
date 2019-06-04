@@ -1,12 +1,10 @@
 let _activeBrowser;
 function openNewBrowser(params = {}, __base) {
   let _win = new __base.BrowserWindow({...params})
+  //设置最大宽高, 可在应用全屏时, 表现正常
   _win.loadURL(params._url)
-  _win.setMovable(params.movable)
-  params.bounds && _win.setBounds(params.bounds)
-  params.isAlwaysOnTop && _win.setAlwaysOnTop(true, 'modal-panel')
-  _win.setVisibleOnAllWorkspaces(true)
   _setActiveBrowser(_win)  
+  _win.on('close', () => _activeBrowser = null)
   return new Promise((res) => res(_win));
 }
 function _setActiveBrowser(_win) {
