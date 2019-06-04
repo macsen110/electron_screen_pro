@@ -21,8 +21,13 @@ const {
     setPendingSessionListLength
 } = require('./tools');
 const {
-    openNewBrowser
+    openNewBrowser,
+    closeBrowser
 } = require('./browser')
+const {
+    getCookie,
+    setCookie
+} = require('./cookie')
 module.exports = {
     'SET_FULL_SCREEN': setFullScreen,
     'QUIT_FULL_SCREEN': quitFullScreen,
@@ -40,5 +45,8 @@ module.exports = {
     'SET_SERVER_STATUS': setServerStatus,
     'SHOW_ERROR_BOX': showErrorBox,
     'SET_PENDING_SESSION_LIST_LENGTH': setPendingSessionListLength,
-    'OPEN_NEW_BROWSER': openNewBrowser
+    'OPEN_NEW_BROWSER': openNewBrowser,
+    'CLOSE_BROWSER': closeBrowser,
+    'GET_COOKIE': getCookie,
+    'SET_COOKIE': setCookie
 };

@@ -58,20 +58,6 @@ app.on('ready', () => {
   win.on('close', (e) => {
     app.quit();
   });
-  const cookie = { url: 'https://m.111.com.cn', name: 'dummy_name', value: 'dummy' }
-  session.defaultSession.cookies.set(cookie)
-    .then(() => {
-      // success
-    }, (error) => {
-      console.error(error)
-    })
-
-  // Query all cookies associated with a specific url.
-  session.defaultSession.cookies.get({ url: 'https://m.111.com.cn' })
-    .then((cookies) => {
-      console.log(cookies)
-    }).catch((error) => {
-      console.log(error)
-    })
+  
   //elecronUpdate.init(win, dialog);暂不需要自动升级
 });
