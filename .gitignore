@@ -1,0 +1,25 @@
+# Created by .ignore support plugin (hsz.mobi)
+node_modules
+.idea
+.tmp
+.npmignore
+Gruntfile.js
+Thumbs.db
+*.css.map
+
+
+
+.DS_Store
+.AppleDouble
+.LSOverride
+# Icon must ends with two \r.
+Icon
+# Thumbnails
+._*
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+__MACOSX
+.zip
+electron/dist
+.history/
