@@ -1,59 +1,60 @@
 {
-    "name": "yyw_im_client",
-    "version": "0.0.5",
-    "description": "A minimal Electron application",
-    "main": "main.js",
-    "scripts": {
-        "start": "electron .",
-        "pack": "electron-builder --dir && build -mw",
-        "dist": "electron-builder",
-        "publish": "build --mac --win -p always",
-        "win": "electron-packager . yyw_im_client --platform win32 --arch ia32 --out dist/ --ignore \"(dist|node_modules/electron.*)\" --overwrite"
+  "name": "yyw_im_client",
+  "version": "0.0.5",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir && build -mw",
+    "dist": "electron-builder",
+    "publish": "build --mac --win -p always",
+    "win": "electron-packager . yyw_im_client --platform win32 --arch ia32 --out dist/ --ignore \"(dist|node_modules/electron.*)\" --overwrite"
+  },
+  "repository": "https://github.com/macsen110/electron-demo",
+  "keywords": [
+    "Electron",
+    "im"
+  ],
+  "author": "Liangyusen",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "6.0.0",
+    "electron-builder": "^20.24.5"
+  },
+  "build": {
+    "icon": "./public/icons/icon.png",
+    "appId": "org.develar.ElectronReact",
+    "mac": {
+      "category": "im_client",
+      "target": [
+        "zip",
+        "dmg"
+      ]
     },
-    "repository": "https://github.com/macsen110/electron-demo",
-    "keywords": [
-        "Electron",
-        "im"
-    ],
-    "author": "Liangyusen",
-    "license": "CC0-1.0",
-    "devDependencies": {
-        "electron": "*",
-        "electron-builder": "^20.24.5"
-    },
-    "build": {
-        "icon": "./public/icons/icon.png",
-        "appId": "org.develar.ElectronReact",
-        "mac": {
-            "category": "im_client",
-            "target": [
-                "zip",
-                "dmg"
-            ]
+    "win": {
+      "icon": "./public/icons/icon.png",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
         },
-        "win": {
-            "icon": "./public/icons/icon.png",
-            "target": [{
-                    "target": "nsis",
-                    "arch": [
-                        "x64",
-                        "ia32"
-                    ]
-                },
-                {
-                    "target": "zip",
-                    "arch": [
-                        "x64",
-                        "ia32"
-                    ]
-                }
-            ]
+        {
+          "target": "zip",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
         }
-    },
-    "dependencies": {
-        "downloads-folder": "^1.0.1",
-        "electron-is-dev": "^0.3.0",
-        "electron-log": "^2.2.16",
-        "electron-updater": "^3.2.0"
+      ]
     }
+  },
+  "dependencies": {
+    "downloads-folder": "^1.0.1",
+    "electron-is-dev": "^0.3.0",
+    "electron-log": "^2.2.16",
+    "electron-updater": "^4.1.2"
+  }
 }

@@ -16,7 +16,7 @@ const {
 } = require('./tunnel/index.js');
 //const elecronUpdate = require('./update'); //自动升级
 const menuTemplate = require('./menu') //菜单配置
-const loadURL = isDev ? 'http://localhost:9000/index.html' : '';
+const loadURL = isDev ? 'http://uchat.ewesell.cn/login.aspx' : 'http://uchat.ewesell.cn/login.aspx';
 
 
 process.env.NODE_ENV = 'production'
@@ -32,7 +32,7 @@ app.on('ready', () => {
     webPreferences: {
       preload: path.join(__dirname, './bridge.js'),
       plugins: true,
-      nodeIntegration: true,
+      nodeIntegration: false,
     }
   });
   win.maximize()

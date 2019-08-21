@@ -6,8 +6,7 @@ node_modules
 Gruntfile.js
 Thumbs.db
 *.css.map
-
-
+dist
 
 .DS_Store
 .AppleDouble
