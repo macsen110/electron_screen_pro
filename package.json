@@ -1,5 +1,5 @@
 {
-  "name": "yyw_im_client",
+  "name": "yyw_wx_client",
   "version": "0.0.5",
   "description": "A minimal Electron application",
   "main": "main.js",
