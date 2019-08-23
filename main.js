@@ -16,7 +16,7 @@ const {
 } = require('./tunnel/index.js');
 //const elecronUpdate = require('./update'); //自动升级
 const menuTemplate = require('./menu') //菜单配置
-const loadURL = isDev ? 'http://uchat.ewesell.cn/login.aspx' : 'http://uchat.ewesell.cn/login.aspx';
+const loadURL = isDev ? 'http://uchat.ewesell.cn/index.html#/chat' : 'http://uchat.ewesell.cn/index.html#/chat';
 
 
 process.env.NODE_ENV = 'production'

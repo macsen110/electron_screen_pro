@@ -1,35 +1,38 @@
 {
   "name": "yyw_wx_client",
-  "version": "0.0.5",
+  "version": "1.0.0",
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "pack": "electron-builder --dir && build -mw",
+    "pack": "electron-builder --dir && build -w",
     "dist": "electron-builder",
     "publish": "build --mac --win -p always",
     "win": "electron-packager . yyw_im_client --platform win32 --arch ia32 --out dist/ --ignore \"(dist|node_modules/electron.*)\" --overwrite"
   },
-  "repository": "https://github.com/macsen110/electron-demo",
   "keywords": [
     "Electron",
     "im"
   ],
-  "author": "Liangyusen",
-  "license": "CC0-1.0",
+  "author": "Liangyusen110",
+  "license": "CC0-1.1",
   "devDependencies": {
     "electron": "6.0.0",
     "electron-builder": "^20.24.5"
   },
   "build": {
     "icon": "./public/icons/icon.png",
-    "appId": "org.develar.ElectronReact",
-    "mac": {
-      "category": "im_client",
-      "target": [
-        "zip",
-        "dmg"
-      ]
+    "appId": "com.electron.yyw_wx_client",
+    "nsis": {
+      "oneClick": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true, 
+      "installerIcon": "./public/icons/favicon.ico",
+      "uninstallerIcon": "./public/icons/favicon.ico",
+      "installerHeaderIcon": "./public/icons/favicon.ico", 
+      "createDesktopShortcut": true, 
+      "createStartMenuShortcut": true,
+      "shortcutName": "yyw_wx_client"
     },
     "win": {
       "icon": "./public/icons/icon.png",
